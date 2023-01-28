@@ -1,0 +1,20 @@
+.about__container {
+    background-image: url('/resources/about-cover.jpg');
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hours__container, .info__container {
+    height: 30%;
+    justify-content: space-around;
+    /* color: #f7dca3; */
+}
+
+.hours__container, .info__container {
+    background-color: #9d9d9d60;
+    border-radius: 8px;
+}
+
+.info__container {
+    width: 50%;
+}

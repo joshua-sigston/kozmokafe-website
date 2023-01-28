@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- styles link -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-header-nav.css">
+    <link rel="stylesheet" href="styles-welcome-container.css">
+    <link rel="stylesheet" href="styles-about.css">
+    <link rel="stylesheet" href="styles-menu-container.css">
+    <link rel="stylesheet" href="styles-blog-container.css">
+    <link rel="stylesheet" href="styles-events-container.css">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Kamenzkafe</title>
+</head>
+<body>
+    <header class="flex">
+        <div class="flex responsive__container">
+            <div class="logo">
+                <h1>Kamenzkafe</h1>
+            </div>
+
+            <div class="responsive__menu" id="responsive-menu">
+                <div class="bar" id="top-bar"></div>
+                <div class="bar" id="middle-bar"></div>
+                <div class="bar bottom__bar" id="bottom-bar"></div>
+            </div>
+        </div>
+
+        <nav class="flex nav" id="nav-menu">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#main-menu" id="menu-button">Menu</a></li>
+        </nav>
+    </header>
+
+    <main class="main__container">
+
+        <section class="welcome__container flex">
+            <div class="title flex">
+                <h1>Welcome to Kamenzkafe</h1>
+            </div>
+            <div class="recomendation flex flex__column">
+                <h3>Today's recomendation</h3>
+                <h5>BLT Pesto</h5>
+                <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe impedit quidem qui.</small>
+            </div>
+        </section>
+
+        <section class="about__container flex" id="about">
+            <div class="hours__container flex flex__column">
+                <h3>Hours</h3>
+                <p>Mon-Thur: 6:00am - 8:00pm</p>
+                <p>Fri-Sat: 7:00am - 5:00pm</p>
+                <p>Sunday: 7:00am - 3:00pm</p>
+            </div>
+            <div class="info__container flex flex__column">
+                <h3>The Establishment</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos sed vel voluptatem veritatis dolor repellendus est velit, tenetur, rem natus adipisci reprehenderit nam modi illo.</p>
+            </div>
+
+        </section>
+
+        <section class="main__menu-container flex" id="main-menu">
+            <li class="menu__link" id="food-link">Food</li>
+            <li class="menu__link" id="creations-link">Creations</li>
+            <li class="menu__link" id="hot-drinks-lnk">Hot Drinks</li>
+            <li class="menu__link" id="ice-drinks-lnk">Ice Drinks</li>
+        </section>
+    
+        <section class="food__menu-container grid">
+            
+                <div class="sandwich__container sub__container flex">
+                    <h2>Sandwiches</h2>
+                    <div class="items__container">
+                        <li>Breakfast Beagel</li>
+                        <li>Turkey Ciabatta</li>
+                        <li>BLT Pesto</li>
+                        <li>Garden Ciabatta</li>
+                        <li>Grilled Cheese</li>
+                        <li>Kamenze Madame</li>
+                        <li>Kamenze Monsieur</li/>
+                    </div>
+                </div>
+                <div class="toast__container sub__container flex">
+                    <h2>Toast</h2>
+                    <div class="items__container">
+                        <li>Almond Avacado Toast</li>
+                        <li>Pesto Avacado Toast</li>
+                        <li>BLT Pesto</li>
+                        <li>Garden Ciabatta</li>
+                        <li>Grilled Cheese</li>
+                        <li>Kamenze Madame</li>
+                        <li>Kamenze Monsieur</li>
+                    </div>
+                </div>
+                <div class="bagels__container sub__container flex">
+                    <h2>Bagels</h2>
+                    <div class="items__container">
+                        <li>Roasted Tomato</li>
+                        <li>Bagel</li>
+                        <li>Birdy Bagel</li>
+                    </div>
+                </div>
+                <div class="other sub__container flex">
+                    <h2>Other</h2>
+                    <div class="items__container">
+                        <li>Veggie Scramble</li>
+                        <li>Quiche</li>
+                        <li>Tater Tots</li>
+                        <li>Caprese Salad</li>
+                    </div>
+                </div>
+            
+        </section>
+    
+        <section class="creations__menu-container grid section__inactive">
+            <div class="creations__container sub__container flex">
+                <h2>Creations</h2>
+                <h3>Iced/Hot/Blended</h3>
+                <div class="items__container">
+                    <li>Butter Beer </li>
+                    <li>Black Cinnamon</li>
+                    <li>Lavendar</li>
+                    <li>Snickerdoodle</li>
+                    <li>Black Berry</li>
+                    <li>Turtle</li>
+                    <li>Caramel Reeses</li>
+                    <li>Black Rose</li>
+                    <li>Vanilla</li>
+                    <li>Almond Joy</li>
+                    <li>White Chocolate Lavendar</li>
+                </div>
+            </div>
+            <div class="smoothie__container sub__container flex">
+                <h2>Smoothies</h2>
+                <div class="items__container">
+                    <li>Protein Smoothie</li>
+                    <li>Berry Smoothie</li>
+                    <li>Tropical Smoothie</li>
+                </div>
+            </div>
+        </section>
+
+        <section class="hotdrinks__menu-container grid section__inactive">
+            <div class="hot__regular-container sub__container flex">
+                <h2>Hot</h2>
+                <div class="items__container">
+                    <li>Drip Coffee</li>
+                    <li>Cafe Au Lait</li>
+                    <li>Americano</li>
+                    <li>Cortado</li>
+                    <li>Cappuccino</li>
+                    <li>Flat White</li>
+                    <li>Latte</li>
+                    <li>Mocha</li>
+                </div>
+            </div>
+            <div class="hot__other-container sub__container flex">
+                <h2>Hot Other</h2>
+                <div class="items__container">
+                    <li>Golden Milk</li>
+                    <li>Hot Chocolate</li>
+                    <li>Hot Tea</li>
+                    <li>Chai Tea Latte</li>
+                    <li>Milk Steamer</li>
+                    <li>Beetroot Latte</li>
+                </div>
+            </div>
+        </section>
+
+        <section class="icedrinks__menu-container flex section__inactive">
+            <li><a href="">Lorem, ipsum dolor.</a></li>
+            <li><a href="">Lorem, ipsum dolor.</a></li>
+            <li><a href="">Lorem, ipsum dolor.</a></li>
+            <li><a href="">Lorem, ipsum dolor.</a></li>
+            <li><a href="">Lorem, ipsum dolor.</a></li>
+        </section>
+
+        <section class="blog__container flex" id="blog">
+            
+            <div class="left__side-card">
+                <div class="left__banner-container"></div>
+            </div>
+
+
+            <div class="right__side-card">
+                <div class="login flex">
+                    <h3>Log In</h3>
+                    <form action="" class="flex">
+                        <input type="text" placeholder="Email, Username, or Phone" required>
+                        <input type="text" placeholder="Password" required>
+                        <input type="submit" class="submit__button">
+                    </form>
+                    <p class="create__account-link">Create Account</p>
+                </div>
+            </div>          
+        
+        </section>
+
+        <section class="create__account-container inactive flex">
+            
+            <div class="card__container create__account-card flex">
+                <h3>Create Your Account</h3>
+                <form action="" class="flex">
+                    <input type="text" name="full-name-create" id="full-name-create" placeholder="Full Name" required>
+                    <input type="email" name="email-create" id="email-create" placeholder="Email" required>
+                    <input type="text" name="password-create" id="password-create" placeholder="Password" required>
+                    <input type="submit" class="submit__button">
+                </form>
+            </div>
+                
+            <div class="blank__card flex">
+                <p class="back__to-login opacity">Back to Login</p>
+            </div>
+        </section>
+
+        <section class="events__container flex flex__column" id="events">
+            <h2>Upcomming Events</h2>
+            <h4>Lorem ipsum dolor sit amet.</h4>
+            <div class="events__calendar grid grid__column">
+                <div class="item one flex"><h3>May 00</h3><p>consectetur adipisicing elit</p></div>
+                <div class="item two flex"><h3>June 00</h3><p>nemo facere quia</p></div>
+                <div class="item three flex"><h3>Aug 00</h3><p>consequuntur asperiores</p></div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
