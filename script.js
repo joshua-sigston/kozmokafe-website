@@ -4,13 +4,6 @@ bottomBar = document.getElementById('bottom-bar')
 responsiveMenu = document.getElementById('responsive-menu')
 navMenu = document.getElementById('nav-menu')
 
-// Log In Section Variables//
-createAccountLink = document.querySelector('.create__account-link')
-logInCard = document.querySelector('.right__side-card')
-leftBanner = document.querySelector('.left__side-card')
-createAccount = document.querySelector('.create__account-container')
-backToLogin = document.querySelector('.back__to-login')
-
 
 //  Responsive Nav Menu //
 responsiveMenu.addEventListener('click', () => {
@@ -44,6 +37,9 @@ hotDrinksLnk = document.getElementById('hot-drinks-lnk')
 iceDrinksMenu = document.querySelector('.icedrinks__menu-container')
 iceDrinksLnk = document.getElementById('ice-drinks-lnk')
 
+const back = document.querySelectorAll('.back_container')
+const menu = document.querySelectorAll('.menu')
+
 // Menu Functionality //
 menuLnk.forEach( link => {
     link.addEventListener('click', () => {
@@ -68,15 +64,15 @@ function revealFood() {
 }
 
 function revealCreations() {
-    creationsMenu.classList.add('section__slide-in')
+    creationsMenu.classList.toggle('section__slide-in')
 }
 
 function revealHotDrinks() {
-    hotDrinksMenu.classList.add('section__slide-in')
+    hotDrinksMenu.classList.toggle('section__slide-in')
 }
 
 function revealIceDrinks() {
-    iceDrinksMenu.classList.add('section__slide-in')
+    iceDrinksMenu.classList.toggle('section__slide-in')
 }
 
 foodLink.addEventListener('click', () => {
@@ -100,33 +96,13 @@ iceDrinksLnk.addEventListener('click', () => {
     removeMenu()
 })
 
-// function revealFoodResponive() {
-//     foodMenu.classList.toggle('food__menu-active')
-// }
+back.forEach( (btn) => 
+    btn.addEventListener('click', () => {
+        menu.forEach( (item) => {
+            if (item.classList.contains('section__slide-in')) {
+                item.classList.remove('section__slide-in')
+            }
+        })
+    })
+)
 
-// Log In Form Functionality//
-createAccountLink.addEventListener('click', () => {
-    logInCard.classList.toggle('card__switch-back')
-
-    setTimeout( ()=> {
-        leftBanner.classList.toggle('card__slide-right')
-        createAccount.classList.toggle('inactive')
-    }, 500)
-
-    setTimeout( () => {
-        createAccount.classList.toggle('z-index')
-        backToLogin.classList.toggle('opacity')
-    }, 1000)
-})
-
-backToLogin.addEventListener('click', () => {
-    backToLogin.classList.toggle('opacity')
-    createAccount.classList.toggle('z-index')
-    leftBanner.classList.toggle('card__slide-right')
-    logInCard.classList.toggle('card__switch-back')
-
-    setTimeout( () => {
-        // logInCard.classList.toggle('card__switch-back')
-        createAccount.classList.toggle('inactive')
-    }, 1000)
-})

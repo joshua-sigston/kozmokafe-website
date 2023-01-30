@@ -58,7 +58,7 @@
                 <p>Fri-Sat: 7:00am - 5:00pm</p>
                 <p>Sunday: 7:00am - 3:00pm</p>
             </div>
-            <div class="info__container flex flex__column">
+            <div class="info__container flex">
                 <h3>The Establishment</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos sed vel voluptatem veritatis dolor repellendus est velit, tenetur, rem natus adipisci reprehenderit nam modi illo.</p>
             </div>
@@ -72,11 +72,11 @@
             <li class="menu__link" id="ice-drinks-lnk">Ice Drinks</li>
         </section>
     
-        <section class="food__menu-container grid">
+        <section class="menu food__menu-container grid">
             
                 <div class="sandwich__container sub__container flex">
-                    <h2>Sandwiches</h2>
-                    <div class="items__container">
+                    <h2 class="sub_title">Sandwiches</h2>
+                    <div class="items__container inactive">
                         <li>Breakfast Beagel</li>
                         <li>Turkey Ciabatta</li>
                         <li>BLT Pesto</li>
@@ -87,8 +87,8 @@
                     </div>
                 </div>
                 <div class="toast__container sub__container flex">
-                    <h2>Toast</h2>
-                    <div class="items__container">
+                    <h2 class="sub_title">Toast</h2>
+                    <div class="items__container inactive">
                         <li>Almond Avacado Toast</li>
                         <li>Pesto Avacado Toast</li>
                         <li>BLT Pesto</li>
@@ -99,30 +99,31 @@
                     </div>
                 </div>
                 <div class="bagels__container sub__container flex">
-                    <h2>Bagels</h2>
-                    <div class="items__container">
+                    <h2 class="sub_title">Bagels</h2>
+                    <div class="items__container inactive">
                         <li>Roasted Tomato</li>
                         <li>Bagel</li>
                         <li>Birdy Bagel</li>
                     </div>
                 </div>
                 <div class="other sub__container flex">
-                    <h2>Other</h2>
-                    <div class="items__container">
+                    <h2 class="sub_title">Other</h2>
+                    <div class="items__container inactive">
                         <li>Veggie Scramble</li>
                         <li>Quiche</li>
                         <li>Tater Tots</li>
                         <li>Caprese Salad</li>
                     </div>
                 </div>
-            
+                <div class="back_container">
+                    <i class="fa-solid fa-arrow-left" id="back"></i>
+                </div>
         </section>
     
-        <section class="creations__menu-container grid section__inactive">
+        <section class="menu creations__menu-container grid section__inactive">
             <div class="creations__container sub__container flex">
-                <h2>Creations</h2>
                 <h3>Iced/Hot/Blended</h3>
-                <div class="items__container">
+                <div class="items__container inactive">
                     <li>Butter Beer </li>
                     <li>Black Cinnamon</li>
                     <li>Lavendar</li>
@@ -138,18 +139,21 @@
             </div>
             <div class="smoothie__container sub__container flex">
                 <h2>Smoothies</h2>
-                <div class="items__container">
+                <div class="items__container inactive">
                     <li>Protein Smoothie</li>
                     <li>Berry Smoothie</li>
                     <li>Tropical Smoothie</li>
                 </div>
             </div>
+            <div class="back_container">
+                <i class="fa-solid fa-arrow-left" id="back"></i>
+            </div>
         </section>
 
-        <section class="hotdrinks__menu-container grid section__inactive">
+        <section class="menu hotdrinks__menu-container grid section__inactive">
             <div class="hot__regular-container sub__container flex">
-                <h2>Hot</h2>
-                <div class="items__container">
+                <h2 class="sub_title">Hot</h2>
+                <div class="items__container inactive">
                     <li>Drip Coffee</li>
                     <li>Cafe Au Lait</li>
                     <li>Americano</li>
@@ -161,8 +165,8 @@
                 </div>
             </div>
             <div class="hot__other-container sub__container flex">
-                <h2>Hot Other</h2>
-                <div class="items__container">
+                <h2 class="sub_title">Hot Other</h2>
+                <div class="items__container inactive">
                     <li>Golden Milk</li>
                     <li>Hot Chocolate</li>
                     <li>Hot Tea</li>
@@ -171,19 +175,28 @@
                     <li>Beetroot Latte</li>
                 </div>
             </div>
+            <div class="back_container">
+                <i class="fa-solid fa-arrow-left" class="back"></i>
+            </div>
         </section>
 
-        <section class="icedrinks__menu-container flex section__inactive">
+        <!-- <section class="icedrinks__menu-container flex section__inactive">
             <li><a href="">Lorem, ipsum dolor.</a></li>
             <li><a href="">Lorem, ipsum dolor.</a></li>
             <li><a href="">Lorem, ipsum dolor.</a></li>
             <li><a href="">Lorem, ipsum dolor.</a></li>
             <li><a href="">Lorem, ipsum dolor.</a></li>
-        </section>
+        </section> -->
 
         <section class="blog__container flex" id="blog">
+
+            <div class="blog_items flex">
+                <div class="item one flex"><h3>Holdiay Update</h3><p>consectetur adipisicing elit</p></div>
+                <div class="item two flex"><h3>Foodie Update</h3><p>nemo facere quia</p></div>
+                <div class="item three flex"><h3>Chess Night</h3><p>consequuntur asperiores</p></div>
+            </div>
             
-            <div class="left__side-card">
+            <!-- <div class="left__side-card">
                 <div class="left__banner-container"></div>
             </div>
 
@@ -198,11 +211,11 @@
                     </form>
                     <p class="create__account-link">Create Account</p>
                 </div>
-            </div>          
+            </div>           -->
         
         </section>
 
-        <section class="create__account-container inactive flex">
+        <!-- <section class="create__account-container inactive flex">
             
             <div class="card__container create__account-card flex">
                 <h3>Create Your Account</h3>
@@ -217,7 +230,7 @@
             <div class="blank__card flex">
                 <p class="back__to-login opacity">Back to Login</p>
             </div>
-        </section>
+        </section> -->
 
         <section class="events__container flex flex__column" id="events">
             <h2>Upcomming Events</h2>
