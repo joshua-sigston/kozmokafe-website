@@ -21,24 +21,27 @@ responsiveMenu.addEventListener('mouseout',  () => {
 })
 
 // Menu Variables
-menuBtn = document.getElementById('menu-button')
-menuPage = document.querySelector('.main__menu-container')
-menuLnk = document.querySelectorAll('.menu__link')
+const menuBtn = document.getElementById('menu-button')
+const menuPage = document.querySelector('.main__menu-container')
+const menuLnk = document.querySelectorAll('.menu__link')
 
-foodMenu = document.querySelector('.food__menu-container')
-foodLink = document.getElementById('food-link')
+const foodMenu = document.querySelector('.food__menu-container')
+const foodLink = document.getElementById('food-link')
 
-creationsMenu = document.querySelector('.creations__menu-container')
-creationsLnk = document.getElementById('creations-link')
+const creationsMenu = document.querySelector('.creations__menu-container')
+const creationsLnk = document.getElementById('creations-link')
 
-hotDrinksMenu = document.querySelector('.hotdrinks__menu-container')
-hotDrinksLnk = document.getElementById('hot-drinks-lnk')
+const hotDrinksMenu = document.querySelector('.hotdrinks__menu-container')
+const hotDrinksLnk = document.getElementById('hot-drinks-lnk')
 
-iceDrinksMenu = document.querySelector('.icedrinks__menu-container')
-iceDrinksLnk = document.getElementById('ice-drinks-lnk')
+const iceDrinksMenu = document.querySelector('.icedrinks__menu-container')
+const iceDrinksLnk = document.getElementById('ice-drinks-lnk')
 
 const back = document.querySelectorAll('.back_container')
 const menu = document.querySelectorAll('.menu')
+
+const subTitle = document.querySelectorAll('.sub_title')
+const itemsContainer = document.querySelectorAll('items_container')
 
 // Menu Functionality //
 menuLnk.forEach( link => {
@@ -105,4 +108,9 @@ back.forEach( (btn) =>
         })
     })
 )
+
+subTitle.forEach( (item) => 
+    item.addEventListener('click', () => {
+        item.nextElementSibling.classList.toggle('inactive')
+    }))
 
