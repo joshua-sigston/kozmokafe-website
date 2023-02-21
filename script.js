@@ -2,8 +2,8 @@
 topBar = document.getElementById('top-bar')
 bottomBar = document.getElementById('bottom-bar')
 responsiveMenu = document.getElementById('responsive-menu')
-navMenu = document.getElementById('nav-menu')
-
+navMenu = document.getElementById('mobile-nav')
+navItem = document.querySelectorAll('.nav_item')
 
 //  Responsive Nav Menu //
 responsiveMenu.addEventListener('click', () => {
@@ -12,18 +12,21 @@ responsiveMenu.addEventListener('click', () => {
     navMenu.classList.toggle('nav__active')
 })
 
-responsiveMenu.addEventListener('mouseover',  () => {
-    navMenu.classList.add('nav__transition')
+responsiveMenu.addEventListener('click',  () => {
+    navMenu.classList.toggle('nav_transition')
 })
 
-responsiveMenu.addEventListener('mouseout',  () => {
-    navMenu.classList.remove('nav__transition')
+navItem.forEach(item => {
+    item.addEventListener('click', () => {
+        navMenu.classList.toggle('nav_transition')
+    })
 })
 
 // Menu Variables
-const menuBtn = document.getElementById('menu-button')
+const menuBtn = document.querySelectorAll('.menu_btn')
 const menuPage = document.querySelector('.main__menu-container')
-const menuLnk = document.querySelectorAll('.menu__link')
+const menuLink = document.querySelectorAll('.menu__link')
+const menu = document.querySelectorAll('.menu')
 
 const foodMenu = document.querySelector('.food__menu-container')
 const foodLink = document.getElementById('food-link')
@@ -34,33 +37,32 @@ const creationsLnk = document.getElementById('creations-link')
 const hotDrinksMenu = document.querySelector('.hotdrinks__menu-container')
 const hotDrinksLnk = document.getElementById('hot-drinks-lnk')
 
-const iceDrinksMenu = document.querySelector('.icedrinks__menu-container')
-const iceDrinksLnk = document.getElementById('ice-drinks-lnk')
-
-const back = document.querySelectorAll('.back_container')
-const menu = document.querySelectorAll('.menu')
+const back = document.querySelectorAll('.back_btn_container')
 
 const subTitle = document.querySelectorAll('.sub_title')
 const itemsContainer = document.querySelectorAll('items_container')
 
-// Menu Functionality //
-menuLnk.forEach( link => {
-    link.addEventListener('click', () => {
-        removeMenu()
-    })
-})
-
-menuBtn.addEventListener('click', () => {
-    foodMenu.classList.remove('section__slide-in')
-    creationsMenu.classList.remove('section__slide-in')
-    menuPage.classList.remove('section__slide-out')
-    hotDrinksMenu.classList.remove('section__slide-in')
-    iceDrinksMenu.classList.remove('section__slide-in')
-})
-
+// Food and Drink Menu Functionality //
 function removeMenu() {
     menuPage.classList.toggle('section__slide-out')
 }
+
+menuLink.forEach( link => {
+    link.addEventListener('click', () => {
+        removeMenu()
+        console.log('asfas')
+    })
+})
+
+menuBtn.forEach( btn => {
+    btn.addEventListener('click', () => {
+        menu.forEach(item => {
+            if(item.classList.contains('section__slide-in')){
+                item.classList.remove('section__slide-in')
+            }
+        })
+    })
+})
 
 function revealFood() {
     foodMenu.classList.toggle('section__slide-in')
@@ -72,10 +74,6 @@ function revealCreations() {
 
 function revealHotDrinks() {
     hotDrinksMenu.classList.toggle('section__slide-in')
-}
-
-function revealIceDrinks() {
-    iceDrinksMenu.classList.toggle('section__slide-in')
 }
 
 foodLink.addEventListener('click', () => {
@@ -94,13 +92,22 @@ hotDrinksLnk.addEventListener('click', () => {
     removeMenu()
 })
 
+const iceDrinksMenu = document.querySelector('.icedrinks__menu-container')
+const iceDrinksLnk = document.getElementById('ice-drinks-lnk')
+
+function revealIceDrinks() {
+    iceDrinksMenu.classList.toggle('section__slide-in')
+}
+
 iceDrinksLnk.addEventListener('click', () => {
+    console.log(iceDrinksLnk)
     revealIceDrinks()
     removeMenu()
 })
 
 back.forEach( (btn) => 
     btn.addEventListener('click', () => {
+        console.log(btn)
         menu.forEach( (item) => {
             if (item.classList.contains('section__slide-in')) {
                 item.classList.remove('section__slide-in')
