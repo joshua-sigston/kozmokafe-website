@@ -10,12 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600&family=Kanit:wght@200;300;400&family=Roboto+Slab:wght@300;400&display=swap" rel="stylesheet">
     <!-- styles link -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="styles-header-nav.css">
-    <link rel="stylesheet" href="styles-welcome-container.css">
-    <link rel="stylesheet" href="styles-about.css">
-    <link rel="stylesheet" href="styles-menu-container.css">
-    <link rel="stylesheet" href="styles-blog-container.css">
-    <link rel="stylesheet" href="styles-events-container.css">
     <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>KozmoKafe</title>
@@ -36,14 +30,12 @@
 
         <nav class="flex nav_desktop">
             <li><a href="#about">About Us</a></li>
-            <li><a href="#blog">Blog</a></li>
             <li><a href="#events">Events</a></li>
             <li><a href="#main-menu" class="menu_btn">Menu</a></li>
         </nav>
 
         <nav class="nav_mobile" id="mobile-nav">
             <li><a href="#about" class="nav_item">About Us</a></li>
-            <li><a href="#blog" class="nav_item">Blog</a></li>
             <li><a href="#events" class="nav_item">Events</a></li>
             <li><a href="#main-menu"  class="nav_item menu_btn">Menu</a></li>
         </nav>
@@ -51,169 +43,161 @@
 
     <main class="main__container">
 
-        <section class="welcome__container flex">
+        <section class="welcome__container grid">
             <div class="title flex">
                 <h1>Welcome to KozmoKafe</h1>
             </div>
-            <div class="recomendation flex flex__column">
+            <div class="top_right_img">
+                <img src="images/img-1.jpg" alt="">
+            </div>
+            <div class="recomendation flex__column">
                 <h3>Today's recomendation</h3>
                 <h5>BLT Pesto</h5>
-                <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe impedit quidem qui.</small>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe impedit quidem qui.</p>
+            </div>
+            <div class="bottom_left_img">
+                <img src="images/img-2.jpg" alt="">
             </div>
         </section>
 
-        <section class="about__container flex" id="about">
-            <div class="hours__container flex flex__column">
+        <section class="about__container grid" id="about">
+            <div class="text__container flex__column">
+                <div class="text_content flex__column">
+                    <h3>The Establishment</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos sed vel voluptatem veritatis dolor repellendus est velit, tenetur, rem natus adipisci reprehenderit nam modi illo.</p>
+                </div>
+            </div>
+            <div class="hours__container flex__column">
                 <h3>Hours</h3>
                 <p>Mon-Thur: 6:00am - 8:00pm</p>
                 <p>Fri-Sat: 7:00am - 5:00pm</p>
                 <p>Sunday: 7:00am - 3:00pm</p>
             </div>
-            <div class="info__container flex">
-                <h3>The Establishment</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos sed vel voluptatem veritatis dolor repellendus est velit, tenetur, rem natus adipisci reprehenderit nam modi illo.</p>
-            </div>
-
         </section>
 
         <section class="main__menu-container grid" id="main-menu">
-            <div class="flex_container flex">
-                <li class="menu__link" id="food-link">Food</li>
-                <li class="menu__link" id="creations-link">Creations</li>
-                <li class="menu__link" id="hot-drinks-lnk">Hot Drinks</li>
-                <li class="menu__link" id="ice-drinks-lnk">Ice Drinks</li>
+            <div class="img__food">
+                <!-- <img src="images/img-6.jpg" alt="food pic"> -->
             </div>
+            <h3 class="menu__link" id="hot-drinks-lnk">Hot Drinks</h3>
+            <div class="img__iced-drinks">
+                <!-- <img src="images/img-5.jpg" alt="iced coffee pic"> -->
+            </div>
+            <h3 class="menu__link" id="food-link">Food</h3>
+            <div class="img__hot-drinks">
+                <!-- <img src="images/img-4.jpg" alt="hot coffee pic"> -->
+            </div>
+            <h3 class="menu__link" id="iced-drinks-lnk">Ice Drinks</h3>
         </section>
     
-        <section class="menu food__menu-container grid">
+        <section class="menu food__menu-container grid" id="food-menu">
+                <div class="pastries">
+                    <h3>Pastries</h3>
+                    <p>adipisicing elit</p>
+                    <p>Est aliquid</p>
+                    <p>dolor sed quas</p>
+                </div>
+
+                <div class="breakfast">
+                    <h3>Breakfast Options</h3>
+                    <p>quas quam</p>
+                    <p>nemo natus</p>
+                    <p>nostrum reiciendis</p>
+                </div>
+
+                <div class="lunch">
+                    <h3>Lunch Options</h3>
+                    <p>consectetur adipisicing</p>
+                    <p>Est aliquid</p>
+                    <p> sed quas quam</p>
+                </div>
+                
+                <div class="back_btn_container flex">
+                    <i class="fa-solid fa-arrow-left back" id="back"></i>
+                </div>
+        </section>
+
+        <section class="menu hotdrinks__menu-container grid" id="hot-drinks-menu">
+            <div class="teas">
+                <h3>Teas</h3>
+                <p>adipisicing elit</p>
+                <p>Est aliquid</p>
+                <p>dolor sed quas</p>
+            </div>
+
+            <div class="lattes">
+                <h3>Lattes</h3>
+                <p>quas quam</p>
+                <p>nemo natus</p>
+                <p>nostrum reiciendis</p>
+                <p>adipisicing elit</p>
+            </div>
+
+            <div class="coffees">
+                <h3>Coffees</h3>
+                <p>consectetur adipisicing</p>
+                <p>Est aliquid</p>
+                <p> sed quas quam</p>
+            </div>
+
+            <div class="mixes">
+                <h3>Exotic Drinks</h3>
+                <p>consectetur adipisicing</p>
+                <p>Est aliquid</p>
+                <p> sed quas quam</p>
+                <p>nemo natus</p>
+            </div>
             
-                <div class="sandwich__container sub__container flex">
-                    <h2 class="sub_title">Sandwiches</h2>
-                    <div class="items__container inactive">
-                        <li>Voluptatem Repudiandae</li>
-                        <li>Magni Explicabo</li>
-                        <li>Adipisicing Elit</li>
-                        <li>Eligendi Excepturi</li>
-                        <li>voluptatibus Suscipit</li>
-                    </div>
-                </div>
-                <div class="toast__container sub__container flex">
-                    <h2 class="sub_title">Toast</h2>
-                    <div class="items__container inactive">
-                        <li>Voluptatem Repudiandae</li>
-                        <li>Magni Explicabo</li>
-                        <li>Adipisicing Elit</li>
-                        <li>Eligendi Excepturi</li>
-                        <li>voluptatibus Suscipit</li>
-                    </div>
-                </div>
-                <div class="bagels__container sub__container flex">
-                    <h2 class="sub_title">Bagels</h2>
-                    <div class="items__container inactive">
-                        <li>Voluptatem Repudiandae</li>
-                        <li>Magni Explicabo</li>
-                        <li>Adipisicing Elit</li>
-                        <li>Eligendi Excepturi</li>
-                        <li>voluptatibus Suscipit</li>
-                    </div>
-                </div>
-                <div class="other sub__container flex">
-                    <h2 class="sub_title">Other</h2>
-                    <div class="items__container inactive">
-                        <li>Voluptatem Repudiandae</li>
-                        <li>Magni Explicabo</li>
-                        <li>Adipisicing Elit</li>
-                        <li>Eligendi Excepturi</li>
-                        <li>voluptatibus Suscipit</li>
-                    </div>
-                </div>
-                <div class="back_btn_container">
-                    <i class="fa-solid fa-arrow-left" id="back"></i>
-                </div>
-        </section>
-
-        <section class="menu creations__menu-container grid section__inactive">
-            <div class="creations__container sub__container flex">
-                <h2 class="sub_title">Iced/Hot/Blended</h2>
-                <div class="items__container inactive">
-                    <li>Voluptatem Repudiandae</li>
-                    <li>Magni Explicabo</li>
-                    <li>Adipisicing Elit</li>
-                    <li>Eligendi Excepturi</li>
-                    <li>voluptatibus Suscipit</li>
-
-                </div>
-            </div>
-            <div class="smoothie__container sub__container flex">
-                <h2 class="sub_title">Smoothies</h2>
-                <div class="items__container inactive">
-                    <li>Voluptatem Repudiandae</li>
-                    <li>Magni Explicabo</li>
-                    <li>Adipisicing Elit</li>
-                    <li>Eligendi Excepturi</li>
-                    <li>voluptatibus Suscipit</li>
-                </div>
-            </div>
-            <div class="back_btn_container ">
-                <i class="fa-solid fa-arrow-left" id="back"></i>
+            <div class="back_btn_container flex">
+                <i class="fa-solid fa-arrow-left back" id="back"></i>
             </div>
         </section>
+        
 
-        <section class="menu hotdrinks__menu-container grid section__inactive">
-            <div class="hot__regular-container sub__container flex">
-                <h2 class="sub_title">Hot</h2>
-                <div class="items__container inactive">
-                    <li>Voluptatem Repudiandae</li>
-                    <li>Magni Explicabo</li>
-                    <li>Adipisicing Elit</li>
-                    <li>Eligendi Excepturi</li>
-                    <li>voluptatibus Suscipit</li>
-                </div>
+        <section class="menu icedrinks__menu-container grid" id="iced-drinks-menu">
+            <div class="teas">
+                <h3>Teas</h3>
+                <p>adipisicing elit</p>
+                <p>Est aliquid</p>
+                <p>dolor sed quas</p>
             </div>
-            <div class="hot__other-container sub__container flex">
-                <h2 class="sub_title">Others</h2>
-                <div class="items__container inactive">
-                    <li>Voluptatem Repudiandae</li>
-                    <li>Magni Explicabo</li>
-                    <li>Adipisicing Elit</li>
-                    <li>Eligendi Excepturi</li>
-                    <li>voluptatibus Suscipit</li>
-                </div>
-            </div>
-            <div class="back_btn_container">
-                <i class="fa-solid fa-arrow-left" class="back"></i>
-            </div>
-        </section>
 
-        <section class="menu icedrinks__menu-container grid section__inactive">
-            <div class="items__container flex">
-                <li>Voluptatem Repudiandae</li>
-                <li>Magni Explicabo</li>
-                <li>Adipisicing Elit</li>
-                <li>Eligendi Excepturi</li>
-                <li>voluptatibus Suscipit</li>
+            <div class="lattes">
+                <h3>Lattes</h3>
+                <p>quas quam</p>
+                <p>nemo natus</p>
+                <p>nostrum reiciendis</p>
+                <p>adipisicing elit</p>
             </div>
-            <div class="back_btn_container">
-                <i class="fa-solid fa-arrow-left" class="back"></i>
+
+            <div class="coffees">
+                <h3>Coffees</h3>
+                <p>consectetur adipisicing</p>
+                <p>Est aliquid</p>
+                <p> sed quas quam</p>
             </div>
-        </section>
 
-        <section class="blog__container grid" id="blog">
+            <div class="mixes">
+                <h3>Exotic Drinks</h3>
+                <p>consectetur adipisicing</p>
+                <p>Est aliquid</p>
+                <p> sed quas quam</p>
+                <p>nemo natus</p>
+            </div>
 
-            <div class="blog_items flex">
-                <div class="item one flex_column"><h3>Holdiay Update</h3><p>consectetur adipisicing elit</p></div>
-                <div class="item two flex_column"><h3>Foodie Update</h3><p>nemo facere quia</p></div>
-                <div class="item three flex_column"><h3>Chess Night</h3><p>consequuntur asperiores</p></div>
+            <div class="back_btn_container flex">
+                <i class="fa-solid fa-arrow-left back" id="back"></i>
             </div>
         </section>
 
         <section class="events__container grid" id="events">
-            <h2>Upcomming Events</h2>
-            <h4>Lorem ipsum dolor sit amet.</h4>
-            <div class="flex_container flex">
-                    <div class="item one flex__column"><h3>May 00</h3><p>consectetur adipisicing elit</p></div>
-                    <div class="item two flex__column"><h3>June 00</h3><p>nemo facere quia</p></div>
-                    <div class="item three flex__column"><h3>Aug 00</h3><p>consequuntur asperiores</p></div>
+            <div class="events_img flex__column">
+                <img src="images/img-7.jpg" alt="">
+            </div>
+            <div class="events_list flex_container flex__column">
+                <div class="item one flex__column"><h3>May 00</h3><p>consectetur adipisicing elit</p></div>
+                <div class="item two flex__column"><h3>June 00</h3><p>nemo facere quia</p></div>
+                <div class="item three flex__column"><h3>Aug 00</h3><p>consequuntur asperiores</p></div>
             </div>
         </section>
     </main>

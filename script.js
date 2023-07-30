@@ -23,101 +23,37 @@ navItem.forEach(item => {
 })
 
 // Menu Variables
-const menuBtn = document.querySelectorAll('.menu_btn')
-const menuPage = document.querySelector('.main__menu-container')
-const menuLink = document.querySelectorAll('.menu__link')
+const back = document.querySelectorAll('.back')
 const menu = document.querySelectorAll('.menu')
 
-const foodMenu = document.querySelector('.food__menu-container')
 const foodLink = document.getElementById('food-link')
+const foodMenu = document.getElementById('food-menu')
 
-const creationsMenu = document.querySelector('.creations__menu-container')
-const creationsLnk = document.getElementById('creations-link')
+const hotDrinksLink = document.getElementById('hot-drinks-lnk')
+const hotDrinksMenu = document.getElementById('hot-drinks-menu')
 
-const hotDrinksMenu = document.querySelector('.hotdrinks__menu-container')
-const hotDrinksLnk = document.getElementById('hot-drinks-lnk')
-
-const back = document.querySelectorAll('.back_btn_container')
-
-const subTitle = document.querySelectorAll('.sub_title')
-const itemsContainer = document.querySelectorAll('items_container')
-
-// Food and Drink Menu Functionality //
-function removeMenu() {
-    menuPage.classList.toggle('section__slide-out')
-}
-
-menuLink.forEach( link => {
-    link.addEventListener('click', () => {
-        removeMenu()
-        console.log('asfas')
-    })
-})
-
-menuBtn.forEach( btn => {
-    btn.addEventListener('click', () => {
-        menu.forEach(item => {
-            if(item.classList.contains('section__slide-in')){
-                item.classList.remove('section__slide-in')
-            }
-        })
-    })
-})
-
-function revealFood() {
-    foodMenu.classList.toggle('section__slide-in')
-}
-
-function revealCreations() {
-    creationsMenu.classList.toggle('section__slide-in')
-}
-
-function revealHotDrinks() {
-    hotDrinksMenu.classList.toggle('section__slide-in')
-}
+const icedDrinksLink = document.getElementById('iced-drinks-lnk')
+const icedDrinksMenu = document.getElementById('iced-drinks-menu')
 
 foodLink.addEventListener('click', () => {
-    revealFood()
-    removeMenu()
-    // revealFoodResponive()
+    foodMenu.classList.add('toggle_menu')
 })
 
-creationsLnk.addEventListener('click', () => {
-    revealCreations()
-    removeMenu()
+hotDrinksLink.addEventListener('click', () => {
+    hotDrinksMenu.classList.add('toggle_menu')
 })
 
-hotDrinksLnk.addEventListener('click', () => {
-    revealHotDrinks()
-    removeMenu()
+icedDrinksLink.addEventListener('click', () => {
+    icedDrinksMenu.classList.add('toggle_menu')
 })
 
-const iceDrinksMenu = document.querySelector('.icedrinks__menu-container')
-const iceDrinksLnk = document.getElementById('ice-drinks-lnk')
-
-function revealIceDrinks() {
-    iceDrinksMenu.classList.toggle('section__slide-in')
-}
-
-iceDrinksLnk.addEventListener('click', () => {
-    console.log(iceDrinksLnk)
-    revealIceDrinks()
-    removeMenu()
-})
-
-back.forEach( (btn) => 
-    btn.addEventListener('click', () => {
-        console.log(btn)
-        menu.forEach( (item) => {
-            if (item.classList.contains('section__slide-in')) {
-                item.classList.remove('section__slide-in')
-            }
-        })
+back.forEach( (btn) => {
+   btn.addEventListener('click', () => {
+    menu.forEach( (container) => {
+        if(container.classList.contains('toggle_menu')){
+            container.classList.remove('toggle_menu')
+        }
     })
-)
-
-subTitle.forEach( (item) => 
-    item.addEventListener('click', () => {
-        item.nextElementSibling.classList.toggle('inactive')
-    }))
+   })  
+})
 
